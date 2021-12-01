@@ -1,6 +1,7 @@
 import pandas as pd 
 from re import search
 
+# May need to change the below location
 df = pd.read_csv('1m_tweets.csv', encoding="utf-8")
 
 depressed_tweets = []
@@ -27,6 +28,7 @@ for index, row in df.iterrows():
 print(len(depressed_tweets))
 print(len(happy_tweets))
 
+# May need to change the below location
 file = open('final_dataset.csv', 'w')
 file.write('text,label\n')
 file.writelines(depressed_tweets)
